@@ -47,7 +47,7 @@ If given key-value pair is not exists then defaultValue will be returned
 #### Save File
 File is not saved to disk until you call `savefile.Sync()` method
 </br>
-stash.Sync() blocks UIThread until operation is completed.
+savefile.Sync() blocks UIThread until operation is completed.
 </br>
 NOTE: Dont save huge files(10 mb or more) when processing an exit message OS may suspend your operation and
 </br>
