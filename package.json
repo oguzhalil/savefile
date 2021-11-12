@@ -1,0 +1,19 @@
+{
+  "name": "com.gamescripts.savefile",
+  "version": "1.0.0",
+  "displayName": "Save File",
+  "description": "Store save files",
+  "unity": "2019.4",
+  "unityRelease": "0b5",
+  "dependencies": {},
+  "keywords": [
+    "save",
+    "file",
+    "script"
+  ],
+  "author": {
+    "name": "Oguzhan Halil Bisgin",
+    "email": "oguzhan.halil@yandex.com.tr",
+    "url": "https://github.com/oguzhalil/savefile.git"
+  }
+}
