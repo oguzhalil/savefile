@@ -27,9 +27,9 @@ Register a method for error handling.
 ```
 #### Set 
 You can save any object supported by binary formatter. 
-<br></br>
+</br>
 int,byte,float,string,classes,struct etc.
-<br></br>
+</br>
  `Set<T>(string key, T value)` creates or updates given key-value pair 
 ```csharp 
  stash.Set("someInteger", 5);
@@ -37,7 +37,8 @@ int,byte,float,string,classes,struct etc.
  stash.Set("gameConfig", writeConfig);
 ```
 #### Get 
-For fail safe `Get<T>(string key, T defaultValue)` method requires defaultValue<br>
+For fail safe `Get<T>(string key, T defaultValue)` method requires defaultValue
+</br>
 If given key-value pair is not exists then defaultValue will be returned
 ```csharp 
  int integer = savefile.Get("someInteger" , 0);
@@ -45,11 +46,11 @@ If given key-value pair is not exists then defaultValue will be returned
 ```
 #### Save File
 File is not saved to disk until you call `stash.Sync()` method
-<br></br>
+</br>
 stash.Sync() blocks UIThread until operation is completed.
-<br></br>
+</br>
 NOTE: Dont save huge files(10 mb or more) when processing an exit message OS may suspend your operation and
-<br></br>
+</br>
 you may end up with broken save file.
 ```csharp 
 // can be called any time during the game.
