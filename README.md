@@ -32,9 +32,9 @@ int,byte,float,string,classes,struct etc.
 </br>
  `Set<T>(string key, T value)` creates or updates given key-value pair 
 ```csharp 
- stash.Set("someInteger", 5);
+ savefile.Set("someInteger", 5);
  GameConfig writeConfig = new GameConfig();
- stash.Set("gameConfig", writeConfig);
+ savefile.Set("gameConfig", writeConfig);
 ```
 #### Get 
 For fail safe `Get<T>(string key, T defaultValue)` method requires defaultValue
@@ -45,7 +45,7 @@ If given key-value pair is not exists then defaultValue will be returned
  GameConfig readConfig = savefile.Get("gameConfig", new GameConfig());
 ```
 #### Save File
-File is not saved to disk until you call `stash.Sync()` method
+File is not saved to disk until you call `savefile.Sync()` method
 </br>
 stash.Sync() blocks UIThread until operation is completed.
 </br>
@@ -56,13 +56,13 @@ you may end up with broken save file.
 // can be called any time during the game.
  savefile.Sync(); 
 
-  // on application killed - make sure stash is saved.
+  // on application killed - make sure file is saved.
  private void OnApplicationQuit()
  {
     savefile.Sync();
  }
 
- // on application suspended (home button) - make sure stash is saved.
+ // on application suspended (home button) - make sure file is saved.
  private void OnApplicationPause(bool pause)
  {
     if(pause)
